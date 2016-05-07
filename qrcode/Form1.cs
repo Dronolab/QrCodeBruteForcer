@@ -44,19 +44,24 @@ namespace qrcode
 
         private void qrDisplay_MouseClick(object sender, MouseEventArgs e)
         {
-            
+            try {
+                ChangeCases(new Point(e.X, e.Y), e.Button);
+            }
+            catch (Exception err) { CombinaisonsCount.Text = err.Message; }
 
+        }
 
-
+        private void ChangeCases(Point pos, MouseButtons btn)
+        {
             int x, y;
-            x = e.X / ((qrDisplay.Size.Height) / GridSize);
-            y = e.Y / ((qrDisplay.Size.Width) / GridSize);
+            x = pos.X / ((qrDisplay.Size.Height) / GridSize);
+            y = pos.Y / ((qrDisplay.Size.Width) / GridSize);
 
             if (x >= GridSize || y >= GridSize)
                 return;
 
             //Console.WriteLine("X=" + x + "\tY=" + y);
-            switch (e.Button)
+            switch (btn)
             {
                 case MouseButtons.Left:
                     qrArray[x, y] = QrCodeWorker.caseType.Black;
@@ -256,6 +261,15 @@ namespace qrcode
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             aboutWin.ShowDialog();
+        }
+
+        private void qrDisplay_MouseMove(object sender, MouseEventArgs e)
+        {
+            try {
+                if (e.Button != MouseButtons.None)
+                    ChangeCases(new Point(e.X, e.Y), e.Button);
+            }
+            catch (Exception err) { CombinaisonsCount.Text = err.Message; }
         }
     }
 }

@@ -37,11 +37,11 @@
             this.gridSizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadTestQRCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.CombinaisonsCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.qrDisplay = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -70,14 +70,14 @@
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.clearToolStripMenuItem.Text = "Clear";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
             // generateAllPossibilitiesToolStripMenuItem
             // 
             this.generateAllPossibilitiesToolStripMenuItem.Name = "generateAllPossibilitiesToolStripMenuItem";
-            this.generateAllPossibilitiesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.generateAllPossibilitiesToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.generateAllPossibilitiesToolStripMenuItem.Text = "Generate";
             this.generateAllPossibilitiesToolStripMenuItem.Click += new System.EventHandler(this.generateAllPossibilitiesToolStripMenuItem_Click);
             // 
@@ -112,6 +112,13 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
             this.toolStripMenuItem1.Text = "?";
             // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -142,6 +149,7 @@
             this.qrDisplay.TabIndex = 2;
             this.qrDisplay.Paint += new System.Windows.Forms.PaintEventHandler(this.qrDisplay_Paint);
             this.qrDisplay.MouseClick += new System.Windows.Forms.MouseEventHandler(this.qrDisplay_MouseClick);
+            this.qrDisplay.MouseMove += new System.Windows.Forms.MouseEventHandler(this.qrDisplay_MouseMove);
             // 
             // listBox1
             // 
@@ -152,13 +160,6 @@
             this.listBox1.TabIndex = 4;
             this.listBox1.TabStop = false;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.aboutToolStripMenuItem.Text = "About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // Form1
             // 
