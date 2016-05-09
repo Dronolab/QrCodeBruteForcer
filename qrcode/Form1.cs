@@ -64,15 +64,24 @@ namespace qrcode
             switch (btn)
             {
                 case MouseButtons.Left:
-                    qrArray[x, y] = QrCodeWorker.caseType.Black;
-                    break;
+                    if (qrArray[x, y] != QrCodeWorker.caseType.Black)
+                        qrArray[x, y] = QrCodeWorker.caseType.Black;
+                    else
+                        return;
+                        break;
 
                 case MouseButtons.Right:
-                    qrArray[x, y] = QrCodeWorker.caseType.White;
+                    if (qrArray[x, y] != QrCodeWorker.caseType.White)
+                        qrArray[x, y] = QrCodeWorker.caseType.White;
+                    else
+                        return;
                     break;
 
                 case MouseButtons.Middle:
-                    qrArray[x, y] = QrCodeWorker.caseType.Unknown;
+                    if (qrArray[x, y] != QrCodeWorker.caseType.Unknown)
+                        qrArray[x, y] = QrCodeWorker.caseType.Unknown;
+                    else
+                        return;
                     break;
 
                 default:
